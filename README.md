@@ -6,8 +6,6 @@ Este projeto analisa dados horários de transformadores do setor elétrico com t
 - detectar falhas por meio de um autoencoder;
 - prever a temperatura do óleo e classificar falhas com redes neurais.
 
-O trabalho foi desenvolvido por Ana Carolina Dutra Ramos, Camila Gois de Jesus e Guilherme Magalhães Júnior.
-
 ## Notebook
 
 - `Entrega_final.ipynb`
@@ -34,7 +32,6 @@ A classe é fortemente desbalanceada:
 | Normal (`0`) | 17.175 | 99,0% |
 | Falha (`1`) | 173 | 1,0% |
 
-> O CSV não está incluído neste repositório. Antes de redistribuí-lo, verifique sua origem, licença e condições de uso.
 
 ## Etapas do projeto
 
@@ -107,9 +104,7 @@ O treinamento das redes pode ser realizado em CPU, mas uma GPU compatível com T
 ## Limitações e próximos passos
 
 - O conjunto possui apenas 173 falhas, dificultando a aprendizagem da classe minoritária.
-- O percentil 99 do erro de reconstrução não foi selecionado diretamente para maximizar recall, F1 ou PR-AUC.
 - As arquiteturas MLP não conseguiram separar adequadamente as falhas no período final.
-- O limiar de decisão deve ser escolhido em um conjunto de validação, não no teste.
 - PR-AUC, recall e matriz de confusão são mais informativos que acurácia para este problema.
 - Técnicas como focal loss, amostragem temporal, modelos de boosting e análise dos eventos de falha podem ser investigadas.
 - Para uso operacional, modelos, scalers, limiares e versões das dependências devem ser persistidos.
